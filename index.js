@@ -1,3 +1,8 @@
+const cors = require('cors');
+
+// Enable CORS
+app.use(cors());
+
 const express = require('express');
 const app = express();
 
@@ -29,8 +34,3 @@ app.post('/submit', (req, res) => {
     // Respond with a success message
     res.status(200).json({ message: 'Survey submitted successfully' });
 });
-
-const cors = require('cors');
-
-// Enable CORS
-app.use(cors());
